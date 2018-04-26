@@ -1,0 +1,21 @@
+IT 114 Final Project
+Due: May 1st (last day of class) or during the final exam. (You must bring a laptop.)
+
+You are to implement a complete chat system as discussed in class. The starting files,
+ChatServer.java, DataObject.java and ChatFrame.java are in the project directory of the 
+course web site along with a screenshot of the demonstration given in class.
+
+You must modify the starting files to add the following features:
+
+
+						Points
+Sending and receiving messages: 		40
+Connect and disconnect client to server:	10
+Announce entrances and exits:			10
+Prepend user name to messages:			10
+Proper user list:				15
+Private messages:				15
+
+
+You must use the ChatFrame given. If you attempt to turn in something different, it will
+not be accepted and you will earn a zero for the project.
