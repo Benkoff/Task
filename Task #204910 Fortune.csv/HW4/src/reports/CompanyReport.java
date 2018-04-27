@@ -37,6 +37,7 @@ public class CompanyReport implements Report {
         revenues = new ArrayList<>();
         profits = new ArrayList<>();
         rank = new ArrayList<>();
+        RANKED = 0;
     }
 
     /**
@@ -86,8 +87,6 @@ public class CompanyReport implements Report {
         MAXRANK = Data.maximum(rank.toArray(new Double[RANKED]));
         AVGRANK = Data.average(rank.toArray(new Double[RANKED]));
         STDRANK = Data.standardDeviation(rank.toArray(new Double[RANKED]));
-
-        System.out.println(toString());
 
         return true;
     }
@@ -152,8 +151,8 @@ public class CompanyReport implements Report {
                 " Avg: " + String.format("%.3f", AVGPRO) +
                 " StD: " + String.format("%.3f", STDPRO) + "\n" +
                 "Rank\n" +
-                "Min: " + String.format("%.0f", MINRANK) +
-                " Max: " + String.format("%.0f", MAXRANK) +
+                "Min: " + String.format("%d", MINRANK) +
+                " Max: " + String.format("%d", MAXRANK) +
                 " Avg: " + String.format("%.3f", AVGRANK) +
                 " StD: " + String.format("%.3f", STDRANK);
     }

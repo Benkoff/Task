@@ -7,7 +7,7 @@ import java.util.stream.Collector;
 /**
  * Set of useful reusable tools for analyzing sets of data.
  */
-public class Data {
+public final class Data {
 
     public Data() {
     }
@@ -48,7 +48,7 @@ public class Data {
      *           See the assignment supplemental for useful information on the Number class.
      * @return Average of passed data. Regardless of type passed will always return a Double.
      */
-    public static <N extends java.lang.Number> java.lang.Double average(N[] data) {
+    public static <N extends Number> Double average(N[] data) {
         return Arrays.stream(data).mapToDouble(Number::doubleValue).average().orElse(0.0d);
     }
 
@@ -74,6 +74,7 @@ public class Data {
     }
 
     /**
+     * Since DoubleSummaryStatistics has no standardDeviation method, this custom calculator used:
      * https://stackoverflow.com/questions/36263352/java-streams-standard-deviation
      */
     private static class DoubleStatistics extends DoubleSummaryStatistics {
